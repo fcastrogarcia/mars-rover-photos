@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mars Rover Photo Browser</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <span class="emoji">🚀</span>
+      <h1>Mars Rover Photo Browser</h1>
+    </header>
+    <div class="searchbox">
+      <span class="input-cnt">
+        <p>Sol</p>
+        <input
+          type="number"
+          name="sol"
+          class="field"
+          placeholder="enter a number between 0-1000"
+          min="0"
+          max="1000"
+          autofocus
+        />
+        <p class="error-message"></p>
+      </span>
+      <span>
+        <p>Camera</p>
+        <select name="camera" class="field">
+          <option value="FHAZ">Front Hazard Avoidance Camera</option>
+          <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+          <option value="MAST">Mast Camera</option>
+          <option value="CHEMCAM">Chemistry and Camera Complex </option>
+          <option value="MAHLI">Mars Hand Lens Imager </option>
+          <option value="MARDI">Mars Descent Imager </option>
+          <option value="NAVCAM">Navigation Camera </option>
+          <option value="PANCAM	">Panoramic Camera </option>
+          <option value="MINITES"
+            >Miniature Thermal Emission Spectrometer (Mini-TES)
+          </option>
+        </select>
+      </span>
+      <button>Search Photos</button>
+    </div>
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="no-photos">No photos for this Sol and Camera.</p>
+    <div class="images"></div>
+    <script src="src/js/scripts.js"></script>
+  </body>
+</html>

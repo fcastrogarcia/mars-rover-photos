@@ -1,0 +1,136 @@
+$nasa-blue: #15418c;
+$nasa-font: "Titillium Web", sans-serif;
+$soft-black: #444444;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $nasa-font;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field,
+p,
+h1 {
+  color: $soft-black;
+}
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22em;
+  top: 2em;
+  position: relative;
+  & span,
+  button {
+    margin: 1em;
+  }
+}
+
+button {
+  width: 8em;
+  background: $nasa-blue;
+  border-style: none;
+  padding: 0.5em;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+select {
+  background: #fff;
+}
+
+.field {
+  height: 3.5em;
+  font-size: 1em;
+  width: 22em;
+  text-align-last: center;
+}
+.active-error {
+  border-color: red;
+}
+.error-message {
+  font-size: 12px;
+  color: red;
+}
+.emoji {
+  font-size: 2em;
+  align-self: flex-start;
+}
+h1 {
+  align-self: center;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  width: 100%;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: (600px * 2 + 30px * 4);
+  height: auto;
+}
+.no-photos {
+  display: none;
+  margin-top: 7em;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+img {
+  width: 700px;
+  margin: 80px 30px 30px 30px;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 150px;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid $nasa-blue;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: $nasa-blue transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
+}
