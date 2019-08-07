@@ -6,14 +6,14 @@ const morgan = require("morgan");
 
 app.use(cors());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.static(path.join(__dirname, "./client/dist")));
 
 //routes
 const apiCall = require("./routes/api");
 app.use("/", apiCall);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
 const port = 8080;
