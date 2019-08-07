@@ -7,7 +7,7 @@
     "start": "node app.js",
     "client": "npm start --prefix ./client",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run parcel && npm run build"
   },
   "keywords": [],
   "author": "",
