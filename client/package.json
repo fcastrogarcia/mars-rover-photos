@@ -13,9 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^9.6.0"
-  },
   "dependencies": {
     "node-sass": "^4.12.0"
   },
